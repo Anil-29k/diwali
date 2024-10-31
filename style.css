@@ -30,6 +30,7 @@ section {
   align-items: center;
   text-align: center;
   flex-direction: column;
+  padding: 20px;
 }
 
 .content h1 {
@@ -46,8 +47,6 @@ section {
 
 #main-diya {
   cursor: pointer;
-  left: auto;
-  top: auto;
   height: 100px;
   margin: 20px;
   transition: all 0.3s ease;
@@ -74,10 +73,7 @@ section {
   transition: transform 0.3s, opacity 0.3s;
   cursor: pointer;
   pointer-events: auto;
-
 }
-
-
 
 #main-diya.lit {
   filter: drop-shadow(0 0 50px yellow);
@@ -105,4 +101,47 @@ section {
   border-radius: 50%;
   transform: translate(-50%, -50%);
   pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .content h1 {
+    font-size: 5em;
+  }
+
+  #main-diya {
+    height: 70px;
+  }
+
+  .diya {
+    width: 50px;
+  }
+
+  .overlay:after {
+    width: 70px;
+    height: 70px;
+    /* Smaller overlay effect for mobile */
+  }
+
+  .content {
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content h1 {
+    font-size: 4em;
+  }
+
+  #main-diya {
+    height: 60px;
+  }
+
+  .diya {
+    width: 40px;
+  }
+
+  .overlay:after {
+    width: 60px;
+    height: 60px;
+  }
 }
